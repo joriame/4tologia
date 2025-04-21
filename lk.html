@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/lk.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Главная страница</title>
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-menu-block">
+        <h1 class="logo" onclick="window.location.href='index.html'">четология</h1>
+        <button class="menu-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="menu">
+          <a href="#" class="menu-link active-link">Каталог курсов</a>
+          <a href="#" class="menu-link">Учиться бесплатно</a>
+          <a href="#" class="menu-link">Контакты</a>
+          <a class="auth-link mobile-auth-link" href="lk.html">Войти</a>
+        </nav>
+      </div>
+      <a class="auth-link desktop-auth-link" href="lk.html">Войти</a>
+    </div>
+  </header>
+  <div class="login-page">
+    <div class="login-page__background"></div>
+
+    <main class="login-card">
+      <h1 class="login-card__title">Вход в личный кабинет</h1>
+
+      <form class="login-form">
+        <div class="form-group">
+          <input type="email" id="email" class="form-input" placeholder="Введите ваш email">
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="password" class="form-input" placeholder="Введите пароль">
+          <a href="#" class="password-recovery">Восстановить пароль</a>
+        </div>
+
+        <button type="submit" class="login-button">Войти</button>
+
+        <div class="form-agreement">
+          Нажимая кнопку, принимаю условия политики и пользовательского соглашения
+        </div>
+      </form>
+
+      <div class="divider">или</div>
+
+      <button class="sber-login-button">
+        Войти по Сбер ID
+      </button>
+
+      <div class="social-login">
+        <img class="social-button" src="assets/img/v60_3.png" alt="вк" class="social-link">
+        <img class="social-button" src="assets/img/v60_6.png" alt="яндекс" class="social-link">
+        <img class="social-button" src="assets/img/v60_9.png" alt="одноклассники" class="social-link">
+        <img class="social-button" src="assets/img/v60_12.png" alt="хром" class="social-link">
+      </div>
+
+      <div class="security-notice">
+        Это безопасно и удобно. Ваши данные защищены шифрованием
+      </div>
+
+      <div class="registration-prompt">
+        Еще нет аккаунта? <a href="#">Зарегистрироваться</a>
+      </div>
+    </main>
+  </div>
+
+
+
+
+
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h1 class="footer-logo">четология</h1>
+        <div class="social-links">
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" aria-label="Odnoklassniki"><i class="fab fa-odnoklassniki"></i></a>
+          <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+          <a href="#" aria-label="Apple"><i class="fab fa-apple"></i></a>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <a href="tel:79126233536" class="contact-phone">+7 (912) 623-35-36</a>
+            <span class="contact-label">По вопросам покупки курсов</span>
+          </div>
+
+          <div class="contact-item">
+            <a href="tel:79126233232" class="contact-phone">+7 (912) 623-32-32</a>
+            <span class="contact-label">Для корпоративных клиентов</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-phone">Писать в чат или на почту: <a href="mailto:support@netology.ru"
+                class="contact-email">support@netology.ru</a></span>
+            <span class="contact-label">Для действующих студентов</span>
+          </div>
+
+          <div class="address">
+            Москва, Варшавское шоссе, д.1, стр. 6,<br>
+            1 этаж, офис 105А
+          </div>
+
+          <div class="copyright">
+            © Нетология, 2011-2025
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <div class="nav-column">
+          <h2 class="nav-title">Информация</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">О компании</a>
+            <a href="#" class="nav-item">Партнёрская программа</a>
+            <a href="#" class="nav-item">Работа в Нетологии</a>
+            <a href="#" class="nav-item">Правовая информация</a>
+            <a href="#" class="nav-item">Контакты</a>
+            <a href="#" class="nav-item">Отзывы</a>
+          </nav>
+        </div>
+
+        <div class="nav-column">
+          <h2 class="nav-title">Обучение</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Учиться бесплатно</a>
+            <a href="#" class="nav-item">Каталог курсов</a>
+            <a href="#" class="nav-item">Популярные курсы</a>
+            <a href="#" class="nav-item">Дизайн и UX</a>
+            <a href="#" class="nav-item">Программирование</a>
+            <a href="#" class="nav-item">Маркетинг</a>
+            <a href="#" class="nav-item">Медицина и здоровье</a>
+            <a href="#" class="nav-item">Новые профессии</a>
+            <a href="#" class="nav-item">Высшее образование</a>
+            <a href="#" class="nav-item">Компьютерные игры</a>
+            <a href="#" class="nav-item">Саморазвитие и хобби</a>
+            <a href="#" class="nav-item">Творческие профессии</a>
+            <a href="#" class="nav-item">Аналитика</a>
+          </nav>
+        </div>
+
+        <div class="nav-column">
+          <h2 class="nav-title">Проекты</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Центр развития карьеры</a>
+            <a href="#" class="nav-item">Подарочный сертификат</a>
+            <a href="#" class="nav-item">Обучение для НКО</a>
+            <a href="#" class="nav-item">Медиа</a>
+            <a href="#" class="nav-item">Глоссарий</a>
+          </nav>
+
+          <h3 class="license-title">Государственная лицензия</h3>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Сайт Минобрнауки России</a>
+            <a href="#" class="nav-item">Сайт Минпросвещения России</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.menu').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
