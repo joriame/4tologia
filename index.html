@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Главная страница</title>
+</head>
+
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-menu-block">
+        <h1 class="logo">четология</h1>
+        <button class="menu-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="menu">
+          <a href="#" class="menu-link active-link">Каталог курсов</a>
+          <a href="#" class="menu-link">Учиться бесплатно</a>
+          <a href="#" class="menu-link">Контакты</a>
+          <a class="auth-link mobile-auth-link" href="#">Войти</a>
+        </nav>
+      </div>
+      <a class="auth-link desktop-auth-link" href="#">Войти</a>
+    </div>
+  </header>
+
+  <!--Секция  Stages -->
+  <section class="courses-stages">
+    <div class="stages-container">
+      <h1 class="container-title">
+        Учим - и помогаем <br>
+        на каждом этапе
+      </h1>
+      <div class="items-container">
+        <div class="stage-item">
+          <h2 class="stage-title">Программирование</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+        <div class="stage-item">
+          <h2 class="stage-title">Творческие профессии</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+        <div class="stage-item">
+          <h2 class="stage-title">Аналитика</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+        <div class="stage-item">
+          <h2 class="stage-title">Профессии в образовании</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+        <div class="stage-item">
+          <h2 class="stage-title">Дизайн и UX</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+        <div class="stage-item">
+          <h2 class="stage-title">Саморазвитие и хобби</h2>
+          <p class="course-count">45 курсов</p>
+        </div>
+      </div>
+      <div class="catalog-link">
+        <p class="catalog-link-text">Полный каталог</p>
+        <div class="arrow">
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.668 9.3L6.86 5.968H0.35V4.232H6.86L3.668 0.899999H6.118L10.318 5.1L6.118 9.3H3.668Z"
+              fill="black" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.menu').classList.toggle('active');
+    });
+  </script>
+  <!-- Секция getting-started -->
+  <section class="getting-started">
+    <div class="getting-started-container">
+      <h2 class="getting-started-title">Если не знаете, с чего начать</h2>
+      <div class="free-info-block">
+        <div class="ft-block">
+          <h3 class="ft-title">Пройдите тест бесплатно
+            и определитесь
+            с профессией</h3>
+          <a href="#" class="ft-link">Пройти тест</a>
+        </div>
+        <div class="ft-block">
+          <h3 class="ft-title">Начните с бесплатных
+            материалов</h3>
+          <a href="#" class="ft-link">Начать учиться</a>
+        </div>
+
+      </div>
+      <div class="get-advice">
+        <h3 class="advice-title">Остались вопросы - мы поможем</h3>
+        <a href="#" class="get-advice-link">Получить консультацию</a>
+      </div>
+    </div>
+  </section>
+  <!-- Секция историй -->
+  <section class="students-history">
+    <div class="students-history-container">
+      <h2 class="students-history-title">Вдохновитесь историями наших выпускников</h2>
+      <div class="students-history-block">
+        <div class="students-history-item">
+          <div class="students-history-item-image">
+            <img src="assets/img/history1.jpg" alt="Из скрипача в Python-разработчика">
+          </div>
+          <div class="students-history-item-text">
+            <h3 class="students-history-item-title">Из скрипача в Python-разработчика</h3>
+            <p class="students-history-item-description">Как разглядеть творчество в Питоне и побороть страхи</p>
+          </div>
+        </div>
+        <div class="students-history-item">
+          <div class="students-history-item-image">
+            <img src="assets/img/history2.jpeg" alt="С завода в UX/UI-дизайн">
+          </div>
+          <div class="students-history-item-text">
+            <h3 class="students-history-item-title">С завода в UX/UI-дизайн</h3>
+            <p class="students-history-item-description">Как попасть в команду мечты сразу после обучения</p>
+          </div>
+        </div>
+        <div class="students-history-item">
+          <div class="students-history-item-image">
+            <img src="assets/img/history3.jpg" alt="Из авиации в BI-аналитику">
+          </div>
+          <div class="students-history-item-text">
+            <h3 class="students-history-item-title">Из авиации в BI-аналитику</h3>
+            <p class="students-history-item-description">Как выбрать востребованную профессию, которая понравится</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Секция консультация -->
+  <section class="consultation">
+    <div class="consultation-container">
+      <div class="consultation-head">
+        <h2 class="consultation-title">Получите консультацию</h2>
+        <p class="consultation-description">Наши менеджеры помогут выбрать
+          направление, расскажут о форматах
+          и программах обучения</p>
+      </div>
+      <div class="consultation-body">
+        <form action="" class="consultation-form">
+          <input type="text" class="name-input" placeholder="Имя" required>
+          <input type="text" class="phone-input" placeholder="+7 (999) 999-99-99" required>
+          <input type="email" class="email-input" placeholder="Электронная почта" required>
+          <button type="submit" class="consultation-submit">Получить консультацию</button>
+        </form>
+        <p class="agreement">Нажимая кнопку, принимаю условия <a href="#" class="agreement-links">политики</a> и
+          <a href="#" class="agreement-links">пользовательского
+            соглашения</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Секция start-guide  -->
+  <section class="start-guide">
+    <div class="start-guide-container">
+      <h2 class="start-guide-title">Если не знаете, с чего начать</h2>
+      <div class="guides-block">
+        <div class="top-block">
+          <div class="card-1">
+            <img src="assets/img/card1.webp" alt="card1">
+            <h3 class="card-title">Закрепление теории
+              на реальных кейсах</h3>
+            <p class="card-desc">Практика от партнёров вдобавок
+              к привычным заданиям —
+              бизнес-игры, митапы, хакатоны,
+              pet-проекты. Вы получите
+              ценный опыт и сможете выгодно
+              выделяться на рынке.</p>
+          </div>
+          <div class="two-cards">
+            <div class="card-2">
+              <h3 class="card-title">Более 100 бесплатных материалов</h3>
+              <p class="card-desc">Образовательные продукты, которые ежегодно помогают 5 000
+                студентов найти свой вектор развития. Сможете найти
+                комфортный для себя формат.</p>
+            </div>
+            <div class="card-3">
+              <div class="card-3-block">
+                <h3 class="card-title">Удобная платформа</h3>
+                <p class="card-desc">Всё, что нужно для эффективной учёбы: планирования, календарь, игры, тренажёры. А с
+                  мобильным
+                  приложением материалы будут всегда под рукой.</p>
+              </div>
+              <img src="assets/img/card3.webp" alt="card3">
+            </div>
+          </div>
+        </div>
+        <div class="card-4">
+          <img src="assets/img/card4.webp" alt="card4">
+          <div class="card-4-block">
+            <h3 class="card-title">Поддержка целой команды</h3>
+            <p class="card-desc">Оперативная связь с преподавателями, координаторами, аспирантами и техническими
+              специалистами. Вы не
+              останетесь с трудностями наедине.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h1 class="footer-logo">четология</h1>
+        <div class="social-links">
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" aria-label="Odnoklassniki"><i class="fab fa-odnoklassniki"></i></a>
+          <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+          <a href="#" aria-label="Apple"><i class="fab fa-apple"></i></a>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <a href="tel:79126233536" class="contact-phone">+7 (912) 623-35-36</a>
+              <span class="contact-label">По вопросам покупки курсов</span>
+          </div>
+
+          <div class="contact-item">
+            <a href="tel:79126233232" class="contact-phone">+7 (912) 623-32-32</a>
+            <span class="contact-label">Для корпоративных клиентов</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-phone">Писать в чат или на почту: <a href="mailto:support@netology.ru"
+                class="contact-email">support@netology.ru</a></span>
+            <span class="contact-label">Для действующих студентов</span>
+          </div>
+
+          <div class="address">
+            Москва, Варшавское шоссе, д.1, стр. 6,<br>
+            1 этаж, офис 105А
+          </div>
+
+          <div class="copyright">
+            © Нетология, 2011-2025
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <div class="nav-column">
+          <h2 class="nav-title">Информация</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">О компании</a>
+            <a href="#" class="nav-item">Партнёрская программа</a>
+            <a href="#" class="nav-item">Работа в Нетологии</a>
+            <a href="#" class="nav-item">Правовая информация</a>
+            <a href="#" class="nav-item">Контакты</a>
+            <a href="#" class="nav-item">Отзывы</a>
+          </nav>
+        </div>
+
+        <div class="nav-column">
+          <h2 class="nav-title">Обучение</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Учиться бесплатно</a>
+            <a href="#" class="nav-item">Каталог курсов</a>
+            <a href="#" class="nav-item">Популярные курсы</a>
+            <a href="#" class="nav-item">Дизайн и UX</a>
+            <a href="#" class="nav-item">Программирование</a>
+            <a href="#" class="nav-item">Маркетинг</a>
+            <a href="#" class="nav-item">Медицина и здоровье</a>
+            <a href="#" class="nav-item">Новые профессии</a>
+            <a href="#" class="nav-item">Высшее образование</a>
+            <a href="#" class="nav-item">Компьютерные игры</a>
+            <a href="#" class="nav-item">Саморазвитие и хобби</a>
+            <a href="#" class="nav-item">Творческие профессии</a>
+            <a href="#" class="nav-item">Аналитика</a>
+          </nav>
+        </div>
+
+        <div class="nav-column">
+          <h2 class="nav-title">Проекты</h2>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Центр развития карьеры</a>
+            <a href="#" class="nav-item">Подарочный сертификат</a>
+            <a href="#" class="nav-item">Обучение для НКО</a>
+            <a href="#" class="nav-item">Медиа</a>
+            <a href="#" class="nav-item">Глоссарий</a>
+          </nav>
+
+          <h3 class="license-title">Государственная лицензия</h3>
+          <nav class="nav-list">
+            <a href="#" class="nav-item">Сайт Минобрнауки России</a>
+            <a href="#" class="nav-item">Сайт Минпросвещения России</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "overscroll-behavior",
+          "overscroll-behavior: none",
+          "min-height: auto",
+          "text-wrap",
+          "text-wrap: balance"
+        ]
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
+  }
+}
