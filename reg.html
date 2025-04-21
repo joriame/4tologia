@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/lk.css">
+  <link rel="stylesheet" href="assets/css/reg.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Авторизация</title>
+  <title>Регистрация</title>
 </head>
 
 <body>
@@ -30,55 +30,54 @@
       <a class="auth-link desktop-auth-link" href="lk.html">Войти</a>
     </div>
   </header>
-  <div class="login-page">
-    <div class="login-page__background"></div>
 
-    <main class="login-card">
-      <h1 class="login-card__title">Вход в личный кабинет</h1>
 
-      <form class="login-form">
+  <div class="registration-page">
+    <div class="registration-page__background"></div>
+    
+    <main class="registration-card">
+      <h1 class="registration-card__title">Регистрация в Четологии</h1>
+      
+      <form class="registration-form">
         <div class="form-group">
+          <label for="email" class="form-label">Email</label>
           <input type="email" id="email" class="form-input" placeholder="Введите ваш email">
         </div>
-
+        
         <div class="form-group">
+          <label for="password" class="form-label">Придумайте пароль</label>
           <input type="password" id="password" class="form-input" placeholder="Введите пароль">
-          <a href="#" class="password-recovery">Восстановить пароль</a>
+          <span class="password-hint">Не менее 8 символов</span>
         </div>
-
-        <button type="submit" class="login-button">Войти</button>
-
+        
+        <button type="submit" class="registration-button">Зарегистрироваться</button>
+        
         <div class="form-agreement">
           Нажимая кнопку, принимаю условия политики и пользовательского соглашения
         </div>
       </form>
-
+      
       <div class="divider">или</div>
-
+      
       <button class="sber-login-button" onclick="window.location.href='https://www.sberbank.com/'">
         Войти по Сбер ID
       </button>
-
+      
       <div class="social-login">
-        <img class="social-button" src="assets/img/v60_3.png" alt="вк" class="social-link"
-          onclick="window.location.href='https://vk.com'">
-        <img class="social-button" src="assets/img/v60_6.png" alt="яндекс" class="social-link"
-          onclick="window.location.href='https://ya.ru/'">
-        <img class="social-button" src="assets/img/v60_9.png" alt="одноклассники" class="social-link"
-          onclick="window.location.href='https://ok.ru/'">
-        <img class="social-button" src="assets/img/v60_12.png" alt="хром" class="social-link"
-          onclick="window.location.href='https://chrome.com'">
+        <img class="social-button" src="assets/img/v60_3.png" alt="вк" class="social-link" onclick="window.location.href='https://vk.com'">
+        <img class="social-button" src="assets/img/v60_6.png" alt="яндекс" class="social-link" onclick="window.location.href='https://ya.ru/'">
       </div>
-
+      
       <div class="security-notice">
         Это безопасно и удобно. Ваши данные защищены шифрованием
       </div>
-
-      <div class="registration-prompt">
-        Еще нет аккаунта? <a href="reg.html">Зарегистрироваться</a>
+      
+      <div class="login-prompt">
+        Уже есть аккаунт? <a href="lk.html">Войти</a>
       </div>
     </main>
   </div>
+
 
 
 
