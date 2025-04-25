@@ -1,6 +1,7 @@
 :root {
   --prolect-font-: "Golos";
   --font-color-: #000;
+  
 }
 @font-face {
   font-family: "Golos";
@@ -34,6 +35,7 @@ html {
 }
 body {
   font-family: "Golos";
+  min-height: 100vh;
 }
 
 /* Шапка сайта */
@@ -194,181 +196,422 @@ body {
     padding: 30px 20px;
   }
 }
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-/* Основные стили страницы */
-.login-page {
+/* Стилизация личного кабинета */
+
+.lk {
   width: 100%;
-  min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: #f1f1f1;
-  padding: 40px 0px;
+  min-height: 100vh;
+  padding: 30px 15px;
+  background-color: #f8f9fa;
 }
 
-.login-page__background {
-  position: absolute;
-  top: 0;
-  left: 0;
+.lk-container {
+  max-width: 1440px;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgb(222, 245, 240) 0%,
-    rgb(188, 248, 227) 11.538%,
-    rgb(194, 243, 234) 13.822%,
-    rgb(199, 238, 241) 17.708%,
-    rgb(210, 227, 254) 22.603%,
-    rgb(188, 248, 227) 52.885%,
-    rgb(210, 227, 254) 75.962%,
-    rgb(188, 248, 227) 87.5%,
-    rgb(205, 247, 234) 93.75%,
-    rgb(214, 246, 237) 96.875%,
-    rgb(222, 245, 240) 100%
-  );
-  z-index: 0;
-}
-
-/* Карточка входа */
-.login-card {
-  width: 359px;
-  padding: 40px 30px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-
-.login-card__title {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Форма */
-.login-form {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-input {
-  width: 100%;
-  height: 37px;
-  padding: 8px 12px;
-  border: 0.5px solid #aaa;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: "Golos";
-}
-
-.password-recovery {
-  display: inline-block;
-  margin-top: 5px;
-  color: #51bbd8;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.login-button {
-  width: 100%;
-  height: 37px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-.form-agreement {
-  color: #aaa;
-  font-size: 12px;
-  margin-top: 15px;
-  text-align: center;
-}
-
-/* Разделитель */
-.divider {
-  position: relative;
-  margin: 25px 0;
-  text-align: center;
-  color: #000;
-  font-size: 12px;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 3px;
-  background-color: #eee;
-}
-
-.divider::before {
-  left: 0;
-}
-
-.divider::after {
-  right: 0;
-}
-
-/* Кнопка Сбер ID */
-.sber-login-button {
-  width: 100%;
-  height: 37px;
-  background-color: #21a049;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 25px;
-}
-
-/* Социальные сети */
-.social-login {
   display: flex;
-  justify-content: space-between;
-  width: 265px;
-  margin: 0 auto 25px;
+  flex-direction: column;
+  align-items: start;
 }
 
-.social-button {
-  width: 50px;
-  height: 50px;
+.container-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Меню */
+.lk-menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: none; 
+}
+
+.lk-menu::-webkit-scrollbar {
+  display: none; 
+}
+
+.lk-link {
+  font-size: 16px;
+  color: #666;
+  text-decoration: none;
+  padding: 8px 15px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  border-radius: 20px;
+}
+
+.lk-link:hover {
+  color: #0066ff;
+  background: rgba(0, 102, 255, 0.1);
+}
+
+/* Блоки информации */
+.lk-block-info {
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lk-block-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.user-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-family: "Golos";
+  color: #555;
+}
+
+.form-input,
+.gender-select {
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+  padding: 0 20px;
+  font-family: "Golos";
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: #f9f9f9;
+}
+
+.form-input:focus,
+.gender-select:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  outline: none;
+  background: #fff;
+}
+
+.save-btn {
+  background: #0066ff;
+  font-size: 16px;
+  color: #fff;
   border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.save-btn:hover {
+  background: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.topic-btn {
+  width: 100%;
+  max-width: 300px;
+}
+
+.topic-block {
+  padding: 30px;
+}
+
+.topic-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.topic-desc {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.checkbox-group {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.checkbox-label {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #f9f9f9;
+}
+
+.checkbox-label:hover {
+  border-color: #0066ff;
+  background: rgba(0, 102, 255, 0.05);
+}
+
+.topic-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: #0066ff;
   cursor: pointer;
 }
 
-/* Уведомление о безопасности */
-.security-notice {
-  color: #aaa;
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 15px;
+.checkbox-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+.auth-block {
+  width: 100%;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Ссылка на регистрацию */
-.registration-prompt {
-  font-size: 12px;
-  text-align: center;
+.auth-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.registration-prompt a {
-  color: #51bbd8;
-  text-decoration: none;
+.auth-block input {
+  max-width: 400px;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: "Golos";
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  background: #f9f9f9;
+  display: block;
 }
+
+.auth-block input:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  outline: none;
+  background: #fff;
+}
+
+.auth-pass {
+  display: block;
+  margin-bottom: 30px;
+}
+.edit-mail{
+  margin-bottom: 40px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .auth-block {
+    padding: 25px;
+  }
+
+  .auth-title {
+    font-size: 20px;
+  }
+
+  .auth-block input {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .save-btn {
+    width: 100%;
+    padding: 14px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .lk {
+    padding: 20px 10px;
+  }
+
+  .container-title {
+    font-size: 24px;
+  }
+
+  .lk-menu {
+    gap: 10px;
+  }
+
+  .lk-link {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .lk-block-info {
+    padding: 20px;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .lk-block-title {
+    font-size: 20px;
+  }
+
+  .user-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-label {
+    font-size: 15px;
+  }
+
+  .form-input,
+  .gender-select {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .topic-title {
+    font-size: 20px;
+  }
+
+  .topic-desc {
+    font-size: 15px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .save-btn {
+    width: 100%;
+  }
+}
+.checkbox-label.marketing {
+  border-left: 4px solid #ff6b6b;
+}
+
+.checkbox-label.business {
+  border-left: 4px solid #4ecdc4;
+}
+
+.checkbox-label.design {
+  border-left: 4px solid #ffbe76;
+}
+
+.checkbox-label.it {
+  border-left: 4px solid #54a0ff;
+}
+
+.checkbox-label.analytics {
+  border-left: 4px solid #a55eea;
+}
+
+.checkbox-label.management {
+  border-left: 4px solid #5f27cd;
+}
+
+.checkbox-label.education {
+  border-left: 4px solid #1dd1a1;
+}
+
+.checkbox-label.creative {
+  border-left: 4px solid #f368e0;
+}
+.lk-block-info,
+.auth-block {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+.lk-link.active {
+  color: #0066FF;
+  background: rgba(0, 102, 255, 0.1);
+}
+.lk-block-info,
+.auth-block {
+  display: none; 
+}
+
+.lk-block-info.active,
+.auth-block.active {
+  display: block; 
+}
+
+.lk-block-info.active,
+.auth-block.active {
+  opacity: 1;
+  height: auto;
+}
+
+.payments {
+  display: none;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.payments.active {
+  display: block;
+}
+
+.payments-text {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+/* Подвал */
 .footer {
   background: #000;
   padding: 60px 0 40px;

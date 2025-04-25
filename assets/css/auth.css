@@ -195,30 +195,43 @@ body {
   }
 }
 
-
 /* Основные стили страницы */
-.registration-page {
+.login-page {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background-color: #f1f1f1;
+  padding: 40px 0px;
 }
 
-.registration-page__background {
+.login-page__background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#def5f0, #bcf8e3);
+  background: linear-gradient(
+    135deg,
+    rgb(222, 245, 240) 0%,
+    rgb(188, 248, 227) 11.538%,
+    rgb(194, 243, 234) 13.822%,
+    rgb(199, 238, 241) 17.708%,
+    rgb(210, 227, 254) 22.603%,
+    rgb(188, 248, 227) 52.885%,
+    rgb(210, 227, 254) 75.962%,
+    rgb(188, 248, 227) 87.5%,
+    rgb(205, 247, 234) 93.75%,
+    rgb(214, 246, 237) 96.875%,
+    rgb(222, 245, 240) 100%
+  );
   z-index: 0;
 }
 
-/* Карточка регистрации */
-.registration-card {
+/* Карточка входа */
+.login-card {
   width: 359px;
   padding: 40px 30px;
   background: #fff;
@@ -228,7 +241,7 @@ body {
   z-index: 1;
 }
 
-.registration-card__title {
+.login-card__title {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -236,19 +249,12 @@ body {
 }
 
 /* Форма */
-.registration-form {
+.login-form {
   margin-bottom: 20px;
 }
 
 .form-group {
   margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #aaa;
-  font-size: 14px;
 }
 
 .form-input {
@@ -258,16 +264,18 @@ body {
   border: 0.5px solid #aaa;
   border-radius: 4px;
   font-size: 14px;
+  font-family: "Golos";
 }
 
-.password-hint {
-  display: block;
+.password-recovery {
+  display: inline-block;
   margin-top: 5px;
-  color: #aaa;
+  color: #51bbd8;
   font-size: 14px;
+  text-decoration: none;
 }
 
-.registration-button {
+.login-button {
   width: 100%;
   height: 37px;
   background-color: #000;
@@ -302,7 +310,7 @@ body {
   position: absolute;
   top: 50%;
   width: 40%;
-  height: 1px;
+  height: 3px;
   background-color: #eee;
 }
 
@@ -331,9 +339,8 @@ body {
 /* Социальные сети */
 .social-login {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  width: 150px;
+  justify-content: space-between;
+  width: 265px;
   margin: 0 auto 25px;
 }
 
@@ -341,8 +348,6 @@ body {
   width: 50px;
   height: 50px;
   border: none;
-  border-radius: 50%;
-  background-color: #f5f5f5;
   cursor: pointer;
 }
 
@@ -354,18 +359,16 @@ body {
   margin-bottom: 15px;
 }
 
-/* Ссылка на вход */
-.login-prompt {
+/* Ссылка на регистрацию */
+.registration-prompt {
   font-size: 12px;
   text-align: center;
 }
 
-.login-prompt a {
+.registration-prompt a {
   color: #51bbd8;
   text-decoration: none;
 }
-
-/* Подвал */
 .footer {
   background: #000;
   padding: 60px 0 40px;

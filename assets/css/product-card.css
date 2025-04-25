@@ -34,6 +34,9 @@ html {
 }
 body {
   font-family: "Golos";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Шапка сайта */
@@ -193,6 +196,9 @@ body {
   .menu {
     padding: 30px 20px;
   }
+}
+.content-wrapper {
+  flex: 1; 
 }
 /* Стилизация карточки товара */
 .card {
@@ -526,6 +532,8 @@ input::placeholder {
   height: max-content;
   padding: 50px 20px;
   background-color: #f8f9fa;
+  min-height: 100vh; 
+  
 }
 .price-cards-container {
   display: flex;
@@ -544,7 +552,7 @@ input::placeholder {
 .price-block {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Добавлено для одинаковой высоты */
+  align-items: stretch;
   width: 100%;
   gap: 30px;
 }
@@ -556,7 +564,7 @@ input::placeholder {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1; /* Добавлено для одинаковой высоты */
+  flex: 1; 
 }
 .card-price:last-child {
   background: linear-gradient(

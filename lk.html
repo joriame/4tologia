@@ -23,62 +23,168 @@
         <nav class="menu">
           <a href="product-card.html" class="menu-link active-link">Каталог курсов</a>
           <a href="#" class="menu-link">Учиться бесплатно</a>
-          <a href="#" class="menu-link">Контакты</a>
-          <a class="auth-link mobile-auth-link" href="lk.html">Войти</a>
+          <a href="contacts.html" class="menu-link">Контакты</a>
+          <a class="auth-link mobile-auth-link" href="auth.html">Войти</a>
         </nav>
       </div>
-      <a class="auth-link desktop-auth-link" href="lk.html">Войти</a>
+      <a class="auth-link desktop-auth-link" href="auth.html">Войти</a>
     </div>
   </header>
-  <div class="login-page">
-    <div class="login-page__background"></div>
-
-    <main class="login-card">
-      <h1 class="login-card__title">Вход в личный кабинет</h1>
-
-      <form class="login-form">
-        <div class="form-group">
-          <input type="email" id="email" class="form-input" placeholder="Введите ваш email">
+  <main class="content-wrapper">
+    <section class="lk">
+      <div class="lk-container">
+        <h2 class="container-title">Настройки</h2>
+        <div class="lk-menu">
+          <a href="#" class="lk-link">Личная информация</a>
+          <a href="#" class="lk-link">Авторизация</a>
+          <a href="#" class="lk-link">Платежи</a>
         </div>
+        <div class="lk-block-info">
+          <img src="assets/img/profile-img.jpg" alt="profile" class="profile-img">
+          <h3 class="lk-block-title">Личная информация</h3>
+          <form class="user-form">
+            <label for="surname" class="form-label surname-label">
+              Фамилия
+              <input type="text" id="surname" class="form-input surname-input" value="Алексеев">
+            </label>
 
-        <div class="form-group">
-          <input type="password" id="password" class="form-input" placeholder="Введите пароль">
-          <a href="#" class="password-recovery">Восстановить пароль</a>
+            <label for="name" class="form-label name-label">
+              Имя
+              <input type="text" id="name" class="form-input name-input" value="Даниил">
+            </label>
+
+            <label for="patronymic" class="form-label patronymic-label">
+              Отчество
+              <input type="text" id="patronymic" class="form-input patronymic-input" value="Русланович">
+            </label>
+
+            <label for="birthday" class="form-label birthday-label">
+              Дата рождения
+              <input type="date" id="birthday" class="form-input date-input" value="2007-03-01">
+            </label>
+
+            <label for="telephone" class="form-label telephone-label">
+              Телефон
+              <input type="tel" id="telephone" class="form-input tel-input" value="+79373901312">
+            </label>
+
+            <label for="male" class="form-label gender-label">
+              Пол
+              <select name="male-choose" id="male" class="form-select gender-select">
+                <option value="1">Мужской</option>
+                <option value="2">Женский</option>
+              </select>
+            </label>
+
+            <label for="company" class="form-label company-label">
+              Компания
+              <input type="text" id="company" class="form-input company-input">
+            </label>
+          </form>
+          <button class="save-btn" type="submit">Сохранить</button>
         </div>
+        <div class="lk-block-info topic-block">
+          <h2 class="topic-title">Какие темы вам хочется изучать</h2>
+          <p class="topic-desc">Настройте Четологию под себя. Расскажите, что вам интересно, и мы сможем советовать вам
+            самые
+            подходящие курсы и занятия.</p>
+          <div class="checkbox-group">
+            <label for="topic-marketing" class="checkbox-label marketing">
+              <input type="checkbox" id="topic-marketing" class="topic-checkbox">
+              <span class="checkbox-text">Маркетинг</span>
+            </label>
 
-        <button type="submit" class="login-button">Войти</button>
+            <label for="topic-business" class="checkbox-label business">
+              <input type="checkbox" id="topic-business" class="topic-checkbox">
+              <span class="checkbox-text">Бизнес и управление</span>
+            </label>
 
-        <div class="form-agreement">
-          Нажимая кнопку, принимаю условия политики и пользовательского соглашения
+            <label for="topic-design" class="checkbox-label design">
+              <input type="checkbox" id="topic-design" class="topic-checkbox">
+              <span class="checkbox-text">Дизайн и UX</span>
+            </label>
+
+            <label for="topic-it" class="checkbox-label it">
+              <input type="checkbox" id="topic-it" class="topic-checkbox">
+              <span class="checkbox-text">Программирование</span>
+            </label>
+            <label for="topic-analytics" class="checkbox-label analytics">
+              <input type="checkbox" id="topic-analytics" class="topic-checkbox">
+              <span class="checkbox-text">Аналитика</span>
+            </label>
+
+            <label for="topic-management" class="checkbox-label management">
+              <input type="checkbox" id="topic-management" class="topic-checkbox">
+              <span class="checkbox-text">Управление командой</span>
+            </label>
+
+            <label for="topic-education" class="checkbox-label education">
+              <input type="checkbox" id="topic-education" class="topic-checkbox">
+              <span class="checkbox-text">Высшее образование</span>
+            </label>
+
+            <label for="topic-creative" class="checkbox-label creative">
+              <input type="checkbox" id="topic-creative" class="topic-checkbox">
+              <span class="checkbox-text">Творческие профессии</span>
+            </label>
+          </div>
+          <button class="save-btn topic-btn">Сохранить</button>
         </div>
-      </form>
-
-      <div class="divider">или</div>
-
-      <button class="sber-login-button" onclick="window.location.href='https://www.sberbank.com/'">
-        Войти по Сбер ID
-      </button>
-
-      <div class="social-login">
-        <img class="social-button" src="assets/img/v60_3.png" alt="вк" class="social-link"
-          onclick="window.location.href='https://vk.com'">
-        <img class="social-button" src="assets/img/v60_6.png" alt="яндекс" class="social-link"
-          onclick="window.location.href='https://ya.ru/'">
-        <img class="social-button" src="assets/img/v60_9.png" alt="одноклассники" class="social-link"
-          onclick="window.location.href='https://ok.ru/'">
-        <img class="social-button" src="assets/img/v60_12.png" alt="хром" class="social-link"
-          onclick="window.location.href='https://chrome.com'">
+        <div class="auth-block lk-block-info">
+          <h2 class="auth-title">Смена почты</h2>
+          <label for="auth-mail">
+            <input type="email" id="auth-mail" placeholder="Введите новый адрес почты">
+            <button class="edit-mail save-btn">Сменить адрес</button>
+          </label>
+          <h2 class="auth-title">Смена пароля</h2>
+          <label for="" class="auth-pass">
+            <input type="password" placeholder="Введите новый пароль">
+            <input type="password" placeholder="Подтверждение пароля">
+          </label>
+          <button class="edit-pass save-btn">Сменить пароль</button>
+        </div>
+        <div class="payments">
+          <p class="payments-text">У вас нет платежей</p>
+        </div>
       </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.lk-link');
+  const infoBlock = document.querySelector('.lk-block-info:not(.auth-block):not(.topic-block)'); // Основной блок
+  const topicBlock = document.querySelector('.topic-block'); // Чекбоксы
+  const authBlock = document.querySelector('.auth-block'); // Авторизация
+  const paymentsBlock = document.querySelector('.payments'); // Новый блок платежей
 
-      <div class="security-notice">
-        Это безопасно и удобно. Ваши данные защищены шифрованием
-      </div>
+  // Показываем "Личную информацию" + чекбоксы по умолчанию
+  infoBlock.classList.add('active');
+  topicBlock.classList.add('active');
+  menuLinks[0].classList.add('active');
 
-      <div class="registration-prompt">
-        Еще нет аккаунта? <a href="reg.html">Зарегистрироваться</a>
-      </div>
-    </main>
-  </div>
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.lk-block-info, .auth-block, .topic-block, .payments').forEach(block => {
+        block.classList.remove('active');
+      });
+      if (this.textContent.includes('Личная информация')) {
+        infoBlock.classList.add('active');
+        topicBlock.classList.add('active');
+      } 
+      else if (this.textContent.includes('Авторизация')) {
+        authBlock.classList.add('active');
+      }
+      else if (this.textContent.includes('Платежи')) {
+        paymentsBlock.classList.add('active');
+      }
+      menuLinks.forEach(item => item.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
+  </script>
+
 
 
 
