@@ -274,6 +274,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   border-bottom: 1px solid #000;
+  cursor: pointer;
 }
 .course-img {
   width: 100px;
